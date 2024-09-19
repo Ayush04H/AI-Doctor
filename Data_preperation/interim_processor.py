@@ -16,8 +16,8 @@ def prepare_medical_dataset(input_path, output_path):
         instruction = f"### Patient Query:\n{df['Patient'][i]}\n\n\n### Doctor Response:\n"
         response = df['Doctor'][i]
         finetuning_dataset.append({
-            "instruction": instruction,
-            "response": response
+            "Question": instruction,
+            "Answer": response
         })
     
     # Save the processed dataset into jsonlines format
